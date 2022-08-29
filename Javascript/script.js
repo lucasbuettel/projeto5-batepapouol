@@ -71,7 +71,7 @@ function enviaMensagem(mensagem) {
     let enviarMensagem = document.querySelector("input").value;
     
     
-    console.log(enviarMensagem);
+    
 
     let objeto = {
         from: ident,
@@ -91,8 +91,6 @@ function mensagemEnviada() {
     tela.innerHTML = tela.innerHTML + `<div class="${objeto.data.type}">
     <a><span class = "negrito"> ${objeto.data.from} </span>${objeto.data.text}</a>
 </div>`
-
-
 
 }
 
