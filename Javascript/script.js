@@ -49,7 +49,7 @@ function imprimeMensagens(mensagens) {
     tela.innerHTML = "";
 
 
-    for (let cont = 0; cont <= mensagens.data.length; cont++) {
+    for (let cont = 0; cont < mensagens.data.length; cont++) {
         tela.innerHTML = tela.innerHTML + `<div class="${mensagens.data[cont].type}">
         <a><a class = "horario">(${mensagens.data[cont].time}) </a> 
         <span class = "negrito"> ${mensagens.data[cont].from} </span>
@@ -57,7 +57,9 @@ function imprimeMensagens(mensagens) {
         </div>`;
 
     }
-    window.scrollTo(0, document.querySelector(".bate-papo").scrollHeight)
+    
+    const elementoQueQueroQueApareca = document.querySelector(`.bate-papo`).lastChild;
+    elementoQueQueroQueApareca.scrollIntoView();
 
     
 }
@@ -66,7 +68,7 @@ setInterval(buscaMensagensServidor, 3000);
 
 function enviaMensagem(mensagem) {
     
-    const enviarMensagem = document.querySelector("input").value;
+    let enviarMensagem = document.querySelector("input").value;
     
     
     console.log(enviarMensagem);
