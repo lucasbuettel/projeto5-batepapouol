@@ -78,6 +78,7 @@ footer {
 }
 .negrito{
     font-weight: bold;
+    margin-right: 3px;
 }
 .status {
     background-color: #DCDCDC;
